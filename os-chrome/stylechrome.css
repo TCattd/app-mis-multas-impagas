@@ -1,0 +1,11 @@
+body {
+	/*Para 400 menos el scroll*/
+	width: 100% !important;
+	min-width: 400px !important;
+	height: 100% !important;
+	min-height: 450px !important;
+}
+
+.content {
+	width: 320px !important;
+}

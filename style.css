@@ -1,0 +1,377 @@
+/* --------------------------- CSS Reset ----------------------------*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3,
+h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+address, big, cite, code, del, dfn, em, font, img, ins,
+kbd, q, s, samp, small, strike, strong, sub, sup, tt,
+var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {margin: 0 auto;padding: 0;border: 0;outline: 0;font-weight: inherit;font-style: inherit;font-size: 100%;font-family: inherit;vertical-align: baseline;}
+:focus { outline: 0;}
+div { margin: 0; padding: 0; }
+a, a:link, a:visited, a:hover, a:active{text-decoration:none}
+table {	border-collapse: separate;border-spacing: 0;}
+th, td {text-align: left; font-weight: normal;}
+img, iframe {border: none; text-decoration:none;}
+ol, ul {list-style: none;}
+input, textarea, select, button {font-size: 100%;font-family: inherit;}
+select {margin: inherit;}
+hr {margin: 0 -20px 16px -20px; padding: 0;border: 0;background-color: #d4d4d4;height: 1px; clear: both; width: auto;}
+
+
+h1 {font-size: 13px;font-weight: bold;text-shadow: 0px 1px 0px #ccc;}
+h2 {font-size: 12px;font-weight: bold;text-shadow: 0px 1px 0px #ccc; margin-bottom: 8px;}
+h3 {font-size: 11px;font-weight: bold;text-shadow: 0px 1px 0px #ccc;}
+h4 {font-size: 10px;font-weight: bold;text-shadow: 0px 1px 0px #ccc;}
+h5 {font-size: 9px;font-weight: bold;text-shadow: 0px 1px 0px #ccc;}
+h6 {font-size: 8px;font-weight: bold;text-shadow: 0px 1px 0px #ccc;}
+a, a:visited, a:hover, a:link{text-decoration: none;color: #c55;}
+a.underline {text-decoration: underline; }
+div.center{text-align: center; margin-top: 14px;}
+div.center a{ text-decoration: none; }
+hr { -moz-box-shadow: 0px 1px 0px #fff; -webkit-box-shadow: 0px 1px 0px #fff; box-shadow: 0px 1px 0px #fff; }
+p {font-size: 11px;line-height: 20px;margin: 12px 0;}
+img.bordered_picture { width: 96%; -moz-box-shadow: 0px 0px 2px #888;-webkit-box-shadow: 0px 0px 2px 888;box-shadow: 0px 0px 2px #888;border: 3px solid white;}
+img.fullwidth {width: 98%;}
+.half_column {width: 48%; display: inline-block;}
+.half_column.last {margin-left: 4%; margin-right: -6%;}
+.three_column {width: 31%; display: inline-block;}
+.three_column.second {padding-left: 3%;}
+.three_column.last {padding-left: 3%; margin-right: -3%;}
+ul li {padding: 3px 0;}
+ul li img.icon {width: 25px; display: inline-block; margin-bottom: -8px; margin-right: 16px;margin-top: 6px;}
+button { border: none; font-size: 11px !important; }
+.button {text-align: center;border-radius: 35px; -moz-border-radius: 35px; -webkit-border-radius: 35px; padding: 4px 20px;border: 1px solid rgba(0,0,0,0.15);-moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.25);-webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.25);box-shadow: inset 0px 1px 0px rgba(255,255,255,0.25);font-size: 11px;color: #fff;text-shadow: 1px -1px 0px rgba(0,0,0,0.15);cursor: pointer;}
+.button:hover{-moz-box-shadow: inset 0px 1px 1px #ddd;-webkit-box-shadow: inset 0px 1px 1px #ddd;box-shadow: inset 0px 1px 1px #ddd;}
+.button:active{-moz-box-shadow: inset 0px -1px 1px #ddd;-webkit-box-shadow: inset 0px -1px 1px #ddd;box-shadow: inset 0px -1px 1px #ddd;}
+.FancyBlue{ background: #7988d4; color: white !important;}
+.Greeny{ background: #40ad66; color: white !important;}
+.BlueGrass{ background: #40b29a; color: white !important;}
+.GreenPlaster{ background: #5fd277; color: white !important;}
+.DarkGreen{ background: #84ba90; color: white !important;}
+.SkyBlue{ background: #30b2c9; color: white !important;}
+.RoyalBlue{ background: #355dc9; color: white !important;}
+.Lila{ background: #d294d7; color: white !important;}
+.PinkyRed{ background: #ef5298; color: white !important;}
+.FlowerBlue{ background: #405e99; color: white !important;}
+.PurpleHaze{ background: #994064; color: white !important;}
+.Mandarine{ background: #f5aa4f; color: white !important;}
+.BrickRed{ background: #c97054; color: white !important;}
+.DarkGrey{ background: #5c5c5c; color: white !important;}
+.DarkRed{ background: #ee2222; color: white !important;}
+.Yellow{ background: #c6c82d; color: white !important;}
+.Brown{ background: #8d4747; color: white !important;}
+.Grey { background: #7b7b7b; color: white !important;}
+.Transparent { background-color: transparent; text-shadow: none !important; color: #6b6b6b !important; border: 1px solid #8b8b8b;}
+.toggle{ border-radius: 35px; -moz-border-radius: 35px; -webkit-border-radius: 35px;padding: 6px 20px;cursor: pointer;margin-bottom: 6px;font-size: 10px;color: #fff;text-shadow: 1px -1px 0px rgba(0,0,0,0.15);cursor: pointer;}
+.container {padding: 6px 10px;padding-bottom: 12px;}
+.tabs {text-align: center;  margin: 22px 0;}
+.tabs li {display: inline-block;}
+.tabs li a {border-radius: 35px; -moz-border-radius: 35px; -webkit-border-radius: 35px;padding: 6px 20px;cursor: pointer;margin-bottom: 6px;font-size: 10px;color: #fff;text-shadow: 1px -1px 0px rgba(0,0,0,0.15);cursor: pointer;margin-bottom: 6px; text-decoration: none;}
+#blog { margin-top: 74px;margin-bottom: 47px; }
+#blog li:after {position: absolute; content: ' '; background-image: url(images/arrow.png); background-repeat: no-repeat; width: 18px; height: 19px; display: inline-block; right: 10px; top: 19px;}
+#blog li:hover:after {opacity: 0.7;}
+#blog li h3 { font-size: 14px; color: white; text-shadow: 1px 1px 0 black; margin: 8px 0 0 16px;}
+#blog li span { font-size: 12px; color: white; text-shadow: 1px 1px 0 black; margin: 3px 0 0 16px; display: block;}
+.comment_info { text-align: right; margin-top: -6px; }
+
+/* --------------------------- Page structure ----------------------------*/
+
+/* --------------------------- Page structure ----------------------------*/
+
+* {
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	/*-webkit-touch-callout: none;
+	-webkit-overflow-scrolling: touch;*/
+}
+
+body {
+/*   -webkit-user-select:none;*/
+	font-family: 'helvetica neue', Helvetica, Arial, sans-serif;
+	font-size:12px;
+	margin:0px;
+	padding:0px;
+	background: #f2f2f2;
+	color: #555;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+
+a, button {
+	outline: none;
+}
+
+.link {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.linkpure {
+	cursor: pointer;
+}
+
+.clear {
+	clear: both;
+}
+
+#header, #footer {
+	position: fixed;
+	width: 100%;
+	text-align: center;
+}
+
+#header {
+	background:#000000 url(images/grad_header.png) repeat-x;
+	top:0;
+	height:101px;
+	color:#ff0;
+	border-bottom:2px solid rgba(0, 0, 0, 0.2);
+	z-index: 1000;
+}
+
+#footer {
+	background:#000000 url(images/grad_header.png) repeat-x;
+    height:42px;
+    bottom:0;
+	line-height:40px;
+	color:#fff;
+	text-align:center;
+	display: none;
+}
+
+
+.content {
+    background: #f2f2f2 url(images/grad_content.png) repeat-x top left;
+    margin:114px 10px 10px 10px;
+    /*margin:10px 10px 10px 10px;*/
+    font-size: 13px;
+    display: none;
+	border: 1px solid white;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px #aaa;
+	padding: 20px;
+	min-height: 300px;
+	height: 100%;
+	-webkit-overflow-scrolling: touch;
+}
+
+.content p {
+	font-size: 12px;
+}
+
+#headerlogo
+{
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+	border-top: 1px solid #282828;
+	text-align: center;
+}
+
+#headerlogo a {
+	text-decoration: none;
+}
+
+#headermenu {
+	height: 62px;
+	width: 100%;
+}
+
+.menuitem {
+	float: left;
+	display: inline;
+	padding: 0px;
+	margin: 0px;
+	height: 60px;
+	border-right: 1px solid #494a4b;
+	text-align:center;
+}
+
+.lastmenu {
+	border-right: 0px !important;
+}
+
+.active {
+	color: #fff;
+	background: url(images/grad_active.png) repeat-x top left;
+}
+
+/*#headermenu img {width: 32px;height: 32px;margin-bottom: -3px; opacity: 0.5;}*/
+#headermenu img {width: 32px;height: 32px;margin-bottom: -3px;}
+#headermenu span {color: #bbb;font-size: 12px;font-family: Arial, Helvetica, sans-serif;}
+/*#headermenu div.active img {opacity: 1;}*/
+#headermenu div.active span {color: #fff;}
+#headermenu a {text-decoration: none;}
+
+
+.menuitem a {
+	display: block;
+}
+
+#mismultas_icono {
+	float: left;
+	display: inline;
+	margin-left: 20px;
+}
+
+#mismultas_icono img {
+	margin-top: 3px;
+}
+
+#mismultas_acercade {
+	float: right;
+	display: inline;
+	margin-right: 20px;
+}
+
+.activeboton {
+	color: red;
+}
+
+button
+{
+	background: url(images/grad_button.png) repeat-x top left;
+	padding: 5px 7px;
+	margin-top: 8px;
+	border: none;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 10px;
+	cursor: pointer;
+	box-shadow: 0px 1px 0px #575757;
+	border: 1px solid #272728;
+	border-bottom: none;
+	font-size: 12px;
+}
+
+input[type="text"], input[type="password"], textarea
+{
+	width: 90%;
+	color: #798e94;
+	height: 24px;
+	margin-bottom: 10px;
+	border: 1px solid #cbd9dc;
+	padding: 5px 8px;
+	background: url(images/grad_input.png) repeat-x top left;
+	border-radius: 2px;
+	box-shadow: 0px 1px 2px #dbdbdb;
+}
+
+input[type="text"]:focus, textarea:focus, input[type="button"]:active {
+	box-shadow: 0px 0px 2px #999;
+}
+
+textarea {
+	padding: 10px 8px;
+	height: 100px;
+}
+
+input[type="button"] {
+	width: 228px;
+	font-weight: bold;
+	height: 30px;
+	padding: 4px 0;
+}
+
+#boton_consultar {
+	text-align:center;
+}
+
+.multali {
+	display: block;
+	clear: both;
+	margin-bottom: 5px;
+	border: 1px solid #CBD9DC;
+	border-radius: 5px;
+	padding: 5px;
+	width: 90%;
+	height: 48px;
+}
+
+.iconright {
+	float: right;
+	margin-right: 6px;
+	vertical-align: middle;
+	margin-top: 7px;
+}
+
+.iconrightvespucionorte {
+	margin-top: 3px !important;
+}
+
+.iconright img {
+	vertical-align: middle;
+}
+
+.itemtextleft {
+	float: left;
+	display: inline;
+	margin-top: 10px;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+#popup_panel input {
+	margin-bottom: 5px;
+}
+
+#kmn_autenticar {
+    background: #f2f2f2 url(images/grad_content.png) repeat-x left -130px;
+	display: none;
+	cursor: pointer;
+	border: 1px solid #FFFFFF;
+	border-radius: 5px;
+	padding: 5px;
+	text-align: center;
+	font-size: 12px;
+	margin: 5px 0px 5px 0px;
+}
+
+#lepatente {
+	width: 60%;
+float: left;
+display: inline;
+}
+
+#buscar_limpiar {
+	margin: 0px 0px -10px 10px;
+}
+
+#ayuda_fonos li img {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+#ayuda_fonos li {
+	margin-top: 5px;
+	border-bottom: 1px solid #CBD9DC;
+}
+
+#emailsoporte a {
+	text-align: center;
+	font-size: 20px;
+}
+
+.ayudafonoright {
+	float: right;
+	display: inline;
+}
+
+.multalivespucionorte {
+	cursor: pointer;
+	color: #DE6363;
+}
+
+.buttonsmall {
+width: 35px !important;
+float: right;
+display: inline;
+margin-top: 5px;
+font-size: 15px;
+font-weight: bold;
+}
+
+.carabinerosfonoicon {
+	vertical-align: middle;
+}

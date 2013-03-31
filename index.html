@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<title>Mis Multas</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <!-- Mobile -->
+  <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+  <script type="text/javascript" charset="utf-8" src="childbrowser.js"></script>
+  <script type="text/javascript" charset="utf-8" src="GAPlugin.js"></script>
+  <script type="text/javascript" charset="utf-8" src="jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="tappable.js"></script>
+  <script type="text/javascript" charset="utf-8" src="killtro.appcommon.js"></script>
+  <script type="text/javascript" charset="utf-8" src="killtro.mismultas.js"></script>
+  <!-- Chrome -->
+  <!--<link rel='stylesheet' href='os-chrome/stylechrome.css' />
+  <link rel='stylesheet' href='os-chrome/jquery.alerts.css' />
+  <script type="text/javascript" charset="utf-8" src="os-chrome/jquery.ui.draggable.js"></script>
+  <script type="text/javascript" charset="utf-8" src="os-chrome/jquery.alerts.js"></script>-->
+
+</head>
+
+<body>
+
+<div id="header">
+        <div id="headerlogo">
+            <div id="mismultas_icono"><img src="images/mismultas_icono_40.png" alt="Mis Multas" width="40" height="31" /></div>
+            <div id="mismultas_acercade" class="link"><button id="link_acercade" class="menuacercade" rel="content_acercade">Acerca de</button></div>
+        </div>
+        <div class="clear"></div>
+        <div id="headermenu">
+            <div class="menuitem menubuscar active link" rel="content_buscar">
+              <img src="images/search.png" alt="Buscar" /><br /><span>Buscar Multas</span>
+            </div>
+            <div class="menuitem menuayuda lastmenu link" rel="content_ayuda">
+              <img src="images/chat.png" alt="Ayuda" /><br /><span>Ayuda</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+</div> <!-- / #header -->
+
+<div id="content_buscar" class="content contentinicio">
+    <h1>Escribe la placa patente:</h1>
+    <p>
+    <div>
+      <input type="text" name="lepatente" id="lepatente" placeholder="AA3030 o AABB30" value="" />
+      <div class="button FancyBlue buttonsmall" value=" Consultar " id="kmn_consultapatente">Ir</div>
+      <div class="clear"></div>
+    </div>
+    </p>
+
+    <p>
+      <div id="kmn_patenteaqui_div">
+        <ul id="kmn_patenteaqui">
+
+        </ul>
+      </div>
+      <div id="kmn_loaderwaitaqui"></div>
+      <div class="clear"></div>
+    </p>
+
+    <p id="boton_consultar">
+      <!-- <input type="button" class="button FancyBlue" value=" Consultar " id="kmn_consultapatente" /> -->
+      <div class="button Grey" id="buscar_limpiar">Limpiar</div>
+    </p>
+</div> <!-- / .content -->
+
+<div id="content_ayuda" class="content">
+  <h1>&iquest;Encargo por Robo en Carabineros?</h1>
+  <p>
+    El veh&iacute;culo por el cual est&aacute;s consultando se encuentra con encargo por Robo en Carabineros de Chile.<br />
+    Deber&iacute;as denunciar inmediatamente si est&aacute;s viendo aquel veh&iacute;culo, informando a Carabineros de Chile, Secci&oacute;n <strong>Encargos y Busqueda de Veh&iacute;culos</strong>, fonos:<br /><br />
+    <img src="images/icon_fono.png" alt="" class="carabinerosfonoicon" /> <a href="tel:+5629221021" class="carabinerosfono">+56 2 922 10 21</a><br /><br />
+    <img src="images/icon_fono.png" alt="" class="carabinerosfonoicon" /> <a href="tel:+5629221019" class="carabinerosfono">+56 2 922 10 19</a><br /><br />
+    Email: <a href="mailto:departamento.encargos@carabineros.cl">departamento.encargos@carabineros.cl</a>
+  </p>
+  <h1>&iquest;Y las multas en Autopistas, donde quedaron?</h1>
+  <p>
+    Desafortunadamente a la mayo&iacute;a de las autopistas no les agrad&oacute; ver que utiliz&aacute;ramos sus datos y nos contact&aacute;ramos a sus sitios.<br />
+    Habiendo sido bloqueados, no tenemos opci&oacute;n m&aacute;s que dar de baja aquellas consultas.<br />
+    Lo sentimos. Realmente.
+  </p>
+  <h1>Soy de Regi&oacute;n y jamas he ido a Santiago o no tengo TAG en mi veh&iacute;culo. &iquest;Por qu&eacute; se consultan los datos de autopistas en la Regi&oacute;n Metropolitana de todos modos?</h1>
+  <p>
+      No podemos "detectar" en que regi&oacute;n vives, o si es que tienes o no un tag a nombre de tu patente. Se consulta por lo tanto, en todas las autopistas de Santiago, siempre.<br />
+      De todos modos, hoy en d&iacute;a (desde el 2012) el Registro Civil mantiene una base de datos al d&iacute;a, en tiempo real, y tambien un registro conjunto de multas por Carabineros y multas aplicadas por transito en autopista sin TAG o no pago de este tambi&eacute;n.<br />
+      Si tienes una multa, esta va a aparecer en el Registro Civil una vez que se le informe a este de aquella multa.
+  </p>
+  <h1>&iquest;C&oacute;mo se eliminan las multas desde el Registro Civil?</h1>
+    <p>- Una vez publicadas en el Registro Civil, las multas pueden eliminarse por pago o por resoluci&oacute;n judicial.</p>
+    <p>- Las multas pueden pagarse en cualquier municipalidad del pa&iacute;s, no es necesario que sea la misma en que se curs&oacute; la infracci&oacute;n.</p>
+    <p>- Una vez pagada, la Tesorer&iacute;a Municipal que recibi&oacute; el pago tiene el deber de informarlos al Registro, cancelando al mismo tiempo el arancel que cobra el SRCeI.</p>
+          <p>- La multa se elimina en forma autom&aacute;tica una vez que la Tesorer&iacute;a ha mandado el informe y realizado los pagos que corresponde.</p>
+          <p>- La multa se elimina por resoluci&oacute;n judicial cuando el mismo Juzgado de Polic&iacute;a Local que aplic&oacute; la sanci&oacute;n lo ordena.</p>
+          <p>- El juez puede declarar la prescripci&oacute;n de la multa (3 a&ntilde;os despu&eacute;s de publicada en el Registro), o absolver al propietario del veh&iacute;culo, o declarar que se cometi&oacute; un error al anotarlo, o cualquier otra causal.</p>
+          <p>- La resoluci&oacute;n judicial que ordena eliminar debe ponerse en conocimiento del Registro, ya sea porque el mismo tribunal la env&iacute;a por correo al Servicio o porque el interesado presenta la copia autorizada de ella en nuestras oficinas.</p>
+          <p>- Una vez que el Servicio del Registro Civil recibe la resoluci&oacute;n, se demora un m&aacute;ximo de siete d&iacute;as h&aacute;biles en practicar la eliminaci&oacute;n. Tenga presente que este plazo puede ser mayor durante el per&iacute;odo de renovaci&oacute;n de permisos de circulaci&oacute;n, por la enorme cantidad de resoluciones que se recibe.</p>
+
+  <h1>Tengo una multa por TAG. &iquest;Qui&eacute;n es el responsable y d&oacute;nde ir?</h1>
+   <p>- <span class="texto_2">Si tiene una multa por TAG, pero no ha ido nunca con el auto a Santiago</span> debe dirigirse al Juzgado de Polic&iacute;a Local que impuso la multa. Si no est&aacute; en la misma ciudad, puede hacerlo a trav&eacute;s de exhorto, presentando sus descargos en el juzgado de su domicilio.</p>
+
+   <h2>Pagu&eacute; la multa hace tiempo, y sigue apareciendo vigente</h2>
+          <p>- Al pagarse las multas, es la Tesorer&iacute;a Municipal que recibi&oacute; el pago la que tiene el deber de informarlo. Tome contacto con la Tesorer&iacute;a en que pag&oacute; para verificar que hayan cumplido con esa obligaci&oacute;n.</p>
+
+    <h2>El Juzgado orden&oacute; que se eliminara la multa y todav&iacute;a aparece</h2>
+          <p>- Verifique en primer lugar que el Juzgado haya puesto en conocimiento del Registro la resoluci&oacute;n que orden&oacute; eliminar la multa. Si lo hizo, puede dirigirse a las oficinas del Registro Civil para aclarar lo ocurrido y solucionar su problema.</p>
+
+    <h2>Cuando compr&eacute; mi auto no ten&iacute;a multas y ahora aparecieron unas que le corresponden al due&ntilde;o anterior</h2>
+
+          <p>- Si las multas se publicaron despu&eacute;s de la fecha de la adquisici&oacute;n, y las infracciones son anteriores, puede dirigirse al Juzgado de Polic&iacute;a Local que aplic&oacute; las multas para solicitar se le absuelva del pago. Aseg&uacute;rese de que la absoluci&oacute;n se ponga en conocimiento del Registro Civil para que las multas se eliminen.</p>
+
+    <h2>Quiero pagar una multa que aparece en el certificado, pero en la municipalidad me dicen que no tienen esa informaci&oacute;n</h2>
+          <p>- Ello ocurre porque, aunque la base de datos del Registro se actualiza diariamente, a las municipalidades se les env&iacute;a, por ley, s&oacute;lo una vez al a&ntilde;o, en el mes de diciembre un estado del registro. Hay municipalidades que no reciben el pago de una multa si &eacute;sta no aparece en la informaci&oacute;n enviada por el SRCeI, pero hay otras que s&iacute; lo hacen. De manera que lo aconsejable es preguntar telef&oacute;nicamente si le recibir&aacute;n el pago o no antes de concurrir a hacer el tr&aacute;mite.</p>
+
+    <h2>Tengo los comprobantes de pago de las multas para llevarlos al Registro y as&iacute; me las eliminen</h2>
+          <p>- El Servicio no puede eliminar las multas con comprobantes de pago o boletas, sino s&oacute;lo con el informe que env&iacute;a la Tesorer&iacute;a Municipal respectiva. Esto porque la Tesorer&iacute;a tiene el deber de hacer pagos junto con enviar el informe. Debe insistir en la Municipalidad para que informen su pago al Registro.</p>
+
+    <h2>Antes de comprar un auto ped&iacute; a una empresa que verificaran si ten&iacute;a multas, y me dicen que tiene muchas m&aacute;s que las que aparecen en el certificado del Registro</h2>
+          <p>- La &uacute;nica informaci&oacute;n oficial acerca de las multas efectivamente impagas es la que consta en el Registro. Es posible que le est&eacute;n informando infracciones presuntamente cometidas por el veh&iacute;culo, que no lleguen a ser publicadas nunca (porque se pagan antes, o porque el Juzgado absolvi&oacute;, o por cualquier otra circunstancia). </p>
+
+  <h1>Tel&eacute;fonos de Contacto del Registro Civil y las Autopistas</h1>
+  <p>
+      <ul id="ayuda_fonos">
+        <li>
+          <img src="images/icon_fono.png" alt="" />Registro Civil, call center: <br /><span class="ayudafonoright"><strong>600 370 2000</strong></span>
+          <div class="clear"></div>
+        </li>
+        <li>
+          <span class="linkpure"><img src="images/icon_fono.png" alt="" />Autopista Central, asistencia comercial: <br /><span class="ayudafonoright"><a href="tel:+5627318163">+56 2 731 81 63</a></span></span>
+          <div class="clear"></div>
+        </li>
+        <li>
+          <span class="linkpure"><img src="images/icon_fono.png" alt="" />Costanera Norte, call center: <br /><span class="ayudafonoright"><a href="tel:+5624900900">+56 2 490 09 00</a></span></span>
+          <div class="clear"></div>
+        </li>
+        <li>
+          <span class="linkpure"><img src="images/icon_fono.png" alt="" />Vespucio Sur, call center: <br /><span class="ayudafonoright"><a href="tel:+5623474900">+56 2 347 49 00</a></span></span>
+          <div class="clear"></div>
+        </li>
+        <li>
+          <img src="images/icon_fono.png" alt="" />Vespucio Norte, call center: <br /><span class="ayudafonoright"><strong>600 571 3000</strong></span>
+          <div class="clear"></div>
+        </li>
+      </ul>
+  </p>
+</div> <!-- / .content -->
+
+<div id="content_acercade" class="content">
+    <h1>Sobre esta Aplicaci&oacute;n.</h1>
+    <p>
+    <em><strong>Mis Multas Impagas</strong></em> es una Aplicaci&oacute;n ideada y desarrollada por <strong>Killtro Media</strong>.
+    </p>
+    <p>Conoce m&aacute;s sobre Killtro Media en <span class="link" id="link_killtrocom">Killtro.com</span></p>
+    <p class="justify">
+    Mis Multas est&aacute; licenciado <span class="link" id="link_cc">bajo GPL v3</span>.<br />
+    </p>
+
+    <h1>Sobre los datos aqu&iacute; entregados.</h1>
+    <p class="justify">
+    Esta aplicaci&oacute;n utiliza los datos p&uacute;blicos entregados por el Registro Civil de Chile via web. Y desde Marzo del 2012, utiliza los datos en tiempo real (actualizados al d&iacute;a) entregados por el Registro Civil a trav&eacute;s del sitio srcei.cl.
+    </p>
+
+    <h1>Ayuda, soporte, reporte de errores y sugerencias.</h1>
+    <p id="emailsoporte">
+      Si tienes dudas sobre el uso de esta aplicaci&oacute;n, si tienes alg&uacute;n problema o error con ella, o si sencillamente deseas sugerirnos algo, no dudes en contactarnos:<br />
+
+      <a href="mailto:soporte@killtro.com" id="link_killtrosoporteemail">soporte@killtro.com</a><br />
+
+      &iexcl;Gracias! ;)
+    </p>
+</div> <!-- / .content -->
+
+<div id="footer">
+  <button id="footer_arriba">Arriba</button>
+</div> <!-- / #footer -->
+
+</body>
+</html>
